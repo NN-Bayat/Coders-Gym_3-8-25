@@ -1,7 +1,9 @@
 import React from "react";
 import { GrYoga } from "react-icons/gr";
-import { FaDumbbell } from "react-icons/fa";
+import { FaDumbbell } from "react-icons/fa6";
 import { GiGymBag } from "react-icons/gi";
+import { motion } from "framer-motion";
+import { SlideLeft } from "../../utility/animation";
 
 const EquipmentData = [
   {
@@ -28,7 +30,6 @@ const EquipmentData = [
     delay: 0.9,
   },
 ];
-
 const Equipments = () => {
   return (
     <div>
@@ -44,11 +45,17 @@ const Equipments = () => {
           </div>
           {EquipmentData.map((item) => {
             return (
-              <div>
-                <div>{item.icon}</div>
-                <p>{item.title}</p>
-                <p>{item.desc}</p>
-              </div>
+              <motion.div
+                variants={SlideLeft(item.delay)}
+                initial="hidden"
+                whileInView="visible"
+                key={item.id}
+                className="bg-gray-100 space-y-4 p-6 hover:bg-white rounded-xl hover:shadow-[0_0_22px_0_rgba(0,0,0,0.15)] "
+              >
+                <div className="text-4xl">{item.icon}</div>
+                <p className="text-2xl font-semibold">{item.title}</p>
+                <p className="text-gray-500">{item.desc}</p>
+              </motion.div>
             );
           })}
         </div>
