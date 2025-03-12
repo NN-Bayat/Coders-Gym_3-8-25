@@ -7,6 +7,7 @@ import Banner from "./components/Banner/Banner";
 import TapCompo from "./components/Tab/TapCompo";
 import Testimonial from "./components/Testimonials/Testimonial";
 import Banner2 from "./components/Banner/Banner2";
+import Footer from "./components/Footer/Footer";
 
 import Img1 from "./assets/2.png";
 import Img2 from "./assets/3.png";
@@ -46,8 +47,9 @@ const App = () => {
       <Banner {...BannerData} />
       <TapCompo />
       <Banner {...Banner2Data} />
-      <Testimonial />
       <Banner2 />
+      <Testimonial />
+      <Footer />
     </div>
   );
 };
