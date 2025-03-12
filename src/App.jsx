@@ -4,10 +4,12 @@ import Hero from "./components/Hero/Hero";
 import BgImage from "./assets/bg.png";
 import Equipments from "./components/Equipments/Equipments";
 import Banner from "./components/Banner/Banner";
+import TapCompo from "./components/Tab/TapCompo";
+import Testimonial from "./components/Testimonials/Testimonial";
+import Banner2 from "./components/Banner/Banner2";
 
 import Img1 from "./assets/2.png";
 import Img2 from "./assets/3.png";
-import TapCompo from "./components/Tab/TapCompo";
 
 const BannerData = {
   image: Img1,
@@ -44,6 +46,8 @@ const App = () => {
       <Banner {...BannerData} />
       <TapCompo />
       <Banner {...Banner2Data} />
+      <Testimonial />
+      <Banner2 />
     </div>
   );
 };
