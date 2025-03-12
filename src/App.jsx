@@ -47,8 +47,8 @@ const App = () => {
       <Banner {...BannerData} />
       <TapCompo />
       <Banner {...Banner2Data} />
-      <Banner2 />
       <Testimonial />
+      <Banner2 />
       <Footer />
     </div>
   );
