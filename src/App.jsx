@@ -7,6 +7,7 @@ import Banner from "./components/Banner/Banner";
 
 import Img1 from "./assets/2.png";
 import Img2 from "./assets/3.png";
+import TapCompo from "./components/Tab/TapCompo";
 
 const BannerData = {
   image: Img1,
@@ -41,7 +42,8 @@ const App = () => {
       </div>
       <Equipments />
       <Banner {...BannerData} />
-      {/* <Banner {...Banner2Data} /> */}
+      <TapCompo />
+      <Banner {...Banner2Data} />
     </div>
   );
 };
